@@ -736,8 +736,21 @@ int main()
     
     return 0;
 }*/
-int main()
+/*int main()
 {
     printf("hello iit bhu");
+    return 0;
+}*/
+int main()
+{
+    int n,factorial=1;
+    printf("enter the value of n:");
+    scanf("%d",&n);
+
+    for(int i=2;i<=n;i++)
+    {
+        factorial*=i;
+    }
+    printf("the factorial of %d is %d",n,factorial);
     return 0;
 }
