@@ -280,7 +280,45 @@ int main()
     printf("enter the number of fuel stations:");
     scanf("%d",&n);
 
-    float gas[n],cost[n],fuel=0
+    int gas[n],cost[n];
+    int tank=0,total=0,gain=0;
+    int start_point=0;
+
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&gas[i]);
+    }
+    printf("\n");
+
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&cost[i]);        
+    }
+    printf("\n");
+
+    for(int i=0;i<n;i++)
+    {
+        gain = gas[i]-cost[i];
+        tank = tank + gain;
+        total =total + gain;  
+        
+        if(tank<0)
+        {
+            tank = 0;
+            start_point = i+1;
+        }
+    }    
+        
+    if(total<0)
+        {
+            printf("-1");
+        }
+    else
+        {
+            printf("%d",start_point);
+        }
+
+    return 0;
 }
 
 
