@@ -782,7 +782,7 @@ int main()
     return 0;
 }*/
 //prompting until a valid input
-int main()
+/*int main()
 {
     int month;
     do
@@ -792,4 +792,36 @@ int main()
     } while (month<1 || month>12); 
     
     return 0;    
+}*/
+// finding the largest factorial less than or equal to 100
+/*int main()
+{
+    int fact=1,n=1;
+
+    for(int i=2;fact<=100;i++)
+    {
+        fact*=i;
+        n++;
+    }
+
+    printf(" %d factorial is the largest factorial less than or equal to 100",n-1);
+    return 0;   
+   
+}*/
+//finding the smallest n such that its factorial is greater than 100
+int main()
+{
+    int fact=1,n=1;
+
+    while(1)
+    {
+        fact*=n;
+        if( fact > 100 )
+        {
+            printf("the smallest n such that its factorial is greater than 100 is %d",n);
+            break;
+        }
+        n++;
+    }
+    return 0;
 }
