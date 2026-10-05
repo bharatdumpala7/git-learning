@@ -754,7 +754,7 @@ int main()
     printf("the factorial of %d is %d",n,factorial);
     return 0;
 }*/
-int main()
+/*int main()
 {
     int n,den;
     float x,sum=0.0,term;
@@ -780,4 +780,16 @@ int main()
 
     printf("sum of the %d terms of exponential function with a=e is %f",n,sum);
     return 0;
+}*/
+//prompting until a valid input
+int main()
+{
+    int month;
+    do
+    {
+        printf("enter a valid month(1-12):");
+        scanf("%d",&month);
+    } while (month<1 || month>12); 
+    
+    return 0;    
 }
