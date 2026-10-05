@@ -741,7 +741,7 @@ int main()
     printf("hello iit bhu");
     return 0;
 }*/
-int main()
+/*int main()
 {
     int n,factorial=1;
     printf("enter the value of n:");
@@ -752,5 +752,32 @@ int main()
         factorial*=i;
     }
     printf("the factorial of %d is %d",n,factorial);
+    return 0;
+}*/
+int main()
+{
+    int n,den;
+    float x,sum=0.0,term;
+    printf("enter the value of x:");
+    scanf("%f",&x);
+    printf("enter how many number of terms should include in the sum (positive only):");
+    scanf("%d",&n);
+    term = 1.0;
+    for(int i=1;i<=n;i++)
+    {
+        if(i==1)
+        {
+            den=1;
+        }
+        else
+        {
+            den*=(i-1);
+        }
+
+        sum = sum + (term / den );
+        term*=x;
+    }
+
+    printf("sum of the %d terms of exponential function with a=e is %f",n,sum);
     return 0;
 }
