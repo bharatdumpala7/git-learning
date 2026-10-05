@@ -274,7 +274,7 @@
     }
     return 0;
 }*/
-int main()
+/*int main()
 {
     int n;
     printf("enter the number of fuel stations:");
@@ -319,7 +319,30 @@ int main()
         }
 
     return 0;
-}
+}*///new thing
+/*int main()
+{
+    int array[5];
+
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&array[i]);
+        printf("%d",array[i]);
+    }
+
+    return 0;
+}*///echo characters typed until new line
+/*int main()
+{
+    char echo;
+    do
+    {
+        scanf("%c",&echo);
+        printf("%c",echo);
+    }while(echo != '\n');
+    return 0;
+}*/
+
 
 
 
