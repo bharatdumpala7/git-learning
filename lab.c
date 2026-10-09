@@ -146,11 +146,7 @@
     printf("longest dry period = %d",bestrun);
     return 0;
 }*/
-<<<<<<< HEAD
 /*int main()
-=======
-int main()
->>>>>>> cea63d843fecc643a11a491a70395328c9869bf2
 {
     int arr[3][3],count1,count2;
 
@@ -287,7 +283,7 @@ int main()
 
     
 }*/
-int main()
+/*int main()
 {
     int n,sum=0,actsum=0,miss;
     printf("enter the number of elements will you store:");
@@ -307,4 +303,72 @@ int main()
     miss = actsum - sum;
     printf("\nmissing intiger from 1 to %d id %d\n",n+1,miss);
     return 0;    
+}*/
+int main()
+{
+    int n,fail=0,top;
+    printf("enter how many students information will you store :");
+    scanf("%d",&n);
+    float std[n][5],avgstd[n],avgsub[5]={0};
+    float max;
+    float total[n];
+
+    //taking input of all 5 subjects
+    printf("\nenter %d students marks:\n",n);
+
+    
+    for(int i=0;i<n;i++)
+    {
+        total[i] = 0.0;
+        for(int j=0;j<5;j++)
+        {
+            scanf("%f",&std[i][j]);
+            total[i]= total[i] + std[i][j];            
+        }
+        avgstd[i] = total[i]/5;
+        
+    }
+
+    for(int j=0;j<5;j++)
+    {
+        for(int i=0;i<n;i++)
+        {
+            avgsub[j]+= std[i][j];
+        }
+        avgsub[j]/=n;
+    }
+
+    max = total[0];
+    for(int i=0;i<n;i++)
+    {
+        if(total[i] > max)
+        {
+            max = total[i];
+            top = i;
+        }
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        if(std[i][0]<40 || std[i][1]<40 || std[i][2]<40 || std[i][3]<40 || std[i][4]<40)
+        fail++;        
+    }
+    printf("\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("students %d: total = %.0f , average = %.2f\n",i+1,total[i],avgstd[i]);
+    }
+    printf("\n");
+
+    printf("top student = student %d\n",top+1);
+    printf("failed students = %d\n\n",fail);
+
+    printf("subjects average:\n");
+
+    for(int i=0;i<5;i++)
+    {
+        printf("subject %d = %.2f\n",i+1,avgsub[i]);
+    }
+    return 0;
 }
+
