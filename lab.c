@@ -146,7 +146,11 @@
     printf("longest dry period = %d",bestrun);
     return 0;
 }*/
+<<<<<<< HEAD
 /*int main()
+=======
+int main()
+>>>>>>> cea63d843fecc643a11a491a70395328c9869bf2
 {
     int arr[3][3],count1,count2;
 
