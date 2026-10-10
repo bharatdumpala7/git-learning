@@ -809,7 +809,7 @@ int main()
    
 }*/
 //finding the smallest n such that its factorial is greater than 100
-int main()
+/*int main()
 {
     int fact=1,n=1;
 
@@ -822,6 +822,28 @@ int main()
             break;
         }
         n++;
+    }
+    return 0;
+}*/
+int main()
+{
+    int n,i=2,limit;
+    printf("enter a number:");
+    scanf("%d",&n);
+
+    limit = sqrt(n);
+    for(i=2;i<=limit;i++)
+    {
+        if(n%i == 0)
+        {
+            printf("\nentered number is not prime number");
+            break;
+        }
+    }
+
+    if(i>limit)
+    {
+        printf("\nenteered number is prime number");
     }
     return 0;
 }
