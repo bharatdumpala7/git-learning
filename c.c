@@ -967,5 +967,31 @@ int main()
 }*/
 int main()
 {
-    
+    int n,num,count1=0,count2=0,count3 =0;
+    printf("enter value of the n:");
+    if(scanf("%d",&n) != 1)
+    {
+        printf("invalid input\n");
+        return 1;
+    }
+
+    printf("enter %d intigers:\n",n);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&num);
+
+        if(num >=0 && num<=10)
+        count1++;
+        else if(num >10 && num<=20)
+        count2++;
+        else if( num > 20)
+        count3++;        
+    }
+
+    printf("\nbased on the entered intigers:\n");
+
+    printf("number of intigers between 0 to 10 (including both): %d\n",count1);
+    printf("number of intigers between 11 to 20 (including both): %d\n",count2);
+    printf("number of intigers above 20: %d\n",count3);
+    return 0;
 }
