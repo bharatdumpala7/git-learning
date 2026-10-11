@@ -825,7 +825,7 @@ int main()
     }
     return 0;
 }*/
-int main()
+/*int main()
 {
     int n,i=2,limit;
     printf("enter a number:");
@@ -846,4 +846,126 @@ int main()
         printf("\nenteered number is prime number");
     }
     return 0;
+}*/
+/*int main()
+{
+    int sum=0,next;
+
+    while(1)
+    {
+        scanf("%d",&next);
+        if(next<0) continue;
+        else if(next == 0) break;
+        sum+=next;
+    }
+    printf("\nsum of the entered positive numbers is %d\n",sum);
+    return 0;
+}*/
+/*int main()
+{
+    for(int i=0;i<3;i++)
+    {
+        printf("* * * *\n");
+    }
+    return 0;
+}*/
+/*const int ROW=3;
+const int COLS=5;
+int main()
+{
+    int row,cols;
+    for(row=1;row<=ROW;row++)
+    {
+        for(cols=1;cols<=COLS;cols++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}*/
+/*const int ROW=5;
+int main()
+{
+    for(int i=1;i<=ROW;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}*/
+/*const int row=5;
+
+int main()
+{
+    for(int i=row;i>0;i--)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+*/
+/*int main()
+{
+    int n,sum=0;
+    printf("enter value of n:");
+    scanf("%d",&n);
+
+    for(int i=1;i<=n;i++)
+    {
+        sum =sum + (i*i);        
+    }
+
+    printf("\nsum of the first %d natural numbers = %d\n",n,sum);
+    return 0;
+}*///finding maximum and second maximum
+/*int main()
+{
+    int n,num,max1,max2,found_max2=0;
+
+    printf("enter the vlaue of n:");
+    scanf("%d",&n);
+
+    printf("\nenter %d numbers :\n",n);
+    scanf("%d",&num);
+
+    max1 = num;
+    //max2 = num;
+
+    for(int i=1;i<n;i++)
+    {
+        scanf("%d",&num);
+
+        
+        if(num > max1)
+        {
+            max2 = max1;            
+            max1 = num; 
+            found_max2 = 1;           
+        }
+        else if ( num < max1 && (num > max2 || found_max2 == 0) )
+        {
+            max2 = num;
+            found_max2 =1;
+        }         
+    }
+
+    printf("\nMaximum: %d\n",max1);
+    if(found_max2 == 1)
+    printf("second maximum : %d\n",max2);
+    else
+    printf("second maximum doesn't exist\n");
+
+    return 0; 
+
+}*/
+int main()
+{
+    
 }
